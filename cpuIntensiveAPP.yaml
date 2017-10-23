@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpuintensiveapptest
+spec:
+  containers:
+  - name: cpuintensiveapp
+    image: seveirroy/cpuintensiveapp
+    resources:
+      requests:
+        cpu: 0.5
+        memory: 100Mi
+      limits:
+        cpu: 1
+        memory: 200Mi
